@@ -5,6 +5,9 @@
 // but not both (C △ D = {1, 4} △ {2, 3} = {1, 2, 3, 4}). 
 // The resulting array must contain only unique values (no duplicates).
 
+/*
+* Extend Array object with uniq methond
+*/
 Array.prototype.uniq = function(){
   var a = {};
   var i = null;
@@ -14,10 +17,18 @@ Array.prototype.uniq = function(){
   return Object.keys(a);
 }
 
-function sym(args) {
+/*
+* Sym subroutine to get the two or more array symetrical difference
+*
+* ex.: sym([1, 2, 3], [5, 2, 1, 4]);
+* returns array
+*/
+function sym() {
   var args_num = arguments.length;
   var sym_hash = {};
 
+  // get all array and remove duplicates.
+  // create a hash with keys 
   for(var i=0; i<args_num ; i++){
     if (!Array.isArray(arguments[i]) ) { throw "Array Expected!"; }
 
