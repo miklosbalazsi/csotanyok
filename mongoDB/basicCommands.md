@@ -1,5 +1,5 @@
 User management commands:
-
+-------------------------
 db.createUser()
 db.dropUser()
 
